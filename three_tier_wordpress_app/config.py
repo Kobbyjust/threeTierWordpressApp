@@ -6,7 +6,7 @@ VPC = 'custom-vpc'
 
 INTERNET_GATEWAY = 'internet-gateway'
 
-KEY_PAIR_NAME = 'us-east-1-key'
+#KEY_PAIR_NAME = 'us-east-1-key'
 
 REGION = 'us-east-1'
 
@@ -73,7 +73,7 @@ SUBNET_CONFIGURATION = {
         'instances': {
             PUBLIC_INSTANCE: {
                 'disable_api_termination': False,
-                'key_name': KEY_PAIR_NAME,
+                #'key_name': KEY_PAIR_NAME,
                 'image_id': AMI,
                 'instance_type': 't2.micro',
                 'security_group_ids': [SECURITY_GROUP],
@@ -89,7 +89,7 @@ SUBNET_CONFIGURATION = {
         'instances': {
             PRIVATE_INSTANCE: {
                 'disable_api_termination': False,
-                'key_name': KEY_PAIR_NAME,
+                #'key_name': KEY_PAIR_NAME,
                 'image_id': AMI,
                 'instance_type': 't2.micro',
                 'security_group_ids': [SECURITY_GROUP],
