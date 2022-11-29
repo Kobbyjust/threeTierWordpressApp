@@ -63,8 +63,8 @@ PRIVATE_INSTANCE = 'private-instance'
 
 # Running EC2 Instances 
 
-# AMI For Wordpress By Bitnami
-AMI = 'ami-012e5e2eb5aca2cdc'
+# AMI For Amazon Linux 2 Keenel 5.10
+AMI = 'ami-0b0dcb5067f052a63'
 
 SUBNET_CONFIGURATION = {
     PUBLIC_SUBNET: {
