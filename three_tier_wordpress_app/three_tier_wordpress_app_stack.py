@@ -31,7 +31,7 @@ class ThreeTierWordpressAppStack(Stack):
           ip_addresses=ec2.IpAddresses.cidr("10.0.0.0/16"),
         
         # 'maxAzs' configures the maximum number of availability zones to use
-          max_azs=3,
+          max_azs=2,
 
         # 'subnetConfiguration' specifies the "subnet groups" to create.
         # Every subnet group will have a subnet for each AZ, so this
@@ -40,7 +40,7 @@ class ThreeTierWordpressAppStack(Stack):
         
         subnet_configuration=[ec2.SubnetConfiguration(
             subnet_type=ec2.SubnetType.PUBLIC,
-            availability_zones=["us-east-1a", "us-east-1b"],
+            #availability_zones=["us-east-1a", "us-east-1b"],
             name="myAppLayer",
             cidr_mask=24
         ),
@@ -48,12 +48,12 @@ class ThreeTierWordpressAppStack(Stack):
         cidr_mask=24,
         name="Application",
         subnet_type=ec2.SubnetType.PRIVATE_WITH_NAT,
-        availability_zones=["us-east-1a", "us-east-1b"],
-        ),
+        #availability_zones=["us-east-1a", "us-east-1b"]
+        )
         ],
 
         #adding access to an internet gateway
-        igw_id = igw_id,
+        #igw_id = igw_id,
         )
 
         #My security Groups
