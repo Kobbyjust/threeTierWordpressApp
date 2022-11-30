@@ -1,5 +1,6 @@
 from aws_cdk.aws_ec2 import RouterType, CfnSecurityGroup
 
+
 #vpc configs
 
 VPC = 'custom-vpc'
